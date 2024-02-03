@@ -1,6 +1,8 @@
 package com.mewtow.cardProcessor.model;
 
 import java.math.BigDecimal;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,5 +29,6 @@ public class Installment {
 	private BigDecimal value;
 	
 	@ManyToOne
-	private Long transaction_id;
+	@JsonIgnoreProperties("Installment")
+	private Transaction transaction;
 }
