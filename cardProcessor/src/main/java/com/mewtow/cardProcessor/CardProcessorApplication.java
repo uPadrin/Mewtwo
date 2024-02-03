@@ -17,7 +17,7 @@ public class CardProcessorApplication {
 	public static void main(String[] args) {/* {
 		SpringApplication.run(CardProcessorApplication.class, args);
 	} */
-			try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\bryan\\OneDrive\\Documentos\\Hackthon - AsapCard\\input-data.csv"))) {
+			try (CSVReader reader = new CSVReader(new FileReader("input-data.csv"))) {
 				List<String[]> r = reader.readAll();
 				r.forEach(x -> System.out.println(Arrays.toString(x)));
 			} catch (FileNotFoundException e) {
