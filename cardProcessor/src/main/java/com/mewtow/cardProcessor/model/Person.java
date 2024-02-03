@@ -1,5 +1,6 @@
 package com.mewtow.cardProcessor.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -20,4 +21,8 @@ public class Person {
 
     @NotNull
     private int age;
+
+    @OneToMany
+    @JsonIgnoreProperties("person")
+    private Transaction transaction;
 }
