@@ -21,7 +21,7 @@ public class Transaction {
 
 	@ManyToOne
 	@JsonIgnoreProperties("transaction")
-	private Person person;
+	private Person person_id;
 
 	@NotNull
 	private String transaction_date;
