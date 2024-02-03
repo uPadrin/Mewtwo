@@ -8,7 +8,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "tb_istallment")
 public class Installment {
@@ -24,36 +28,4 @@ public class Installment {
 	
 	@ManyToOne
 	private Long transaction_id;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getInstallment_number() {
-		return installment_number;
-	}
-
-	public void setInstallment_number(Long installment_number) {
-		this.installment_number = installment_number;
-	}
-
-	public BigDecimal getValue() {
-		return value;
-	}
-
-	public void setValue(BigDecimal value) {
-		this.value = value;
-	}
-
-	public Long getTransaction_id() {
-		return transaction_id;
-	}
-
-	public void setTransaction_id(Long transaction_id) {
-		this.transaction_id = transaction_id;
-	}
 }
