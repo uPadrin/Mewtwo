@@ -1,5 +1,17 @@
-spring.datasource.url=jdbc:h2:mem:db_cardProcessor
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=root
-spring.datasource.password=root
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring:
+  datasource:
+    url: jdbc:h2:mem:db_cardProcessor
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      properties:
+        hibernate.format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
