@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,10 +21,12 @@ public class Transaction {
 
 	@ManyToOne
 	@JsonIgnoreProperties("transaction")
-	private Long person_id;
+	private Person person_id;
 
+	@NotNull
 	private String transaction_date;
 
+	@NotNull
 	private int amount;
 	
 }
