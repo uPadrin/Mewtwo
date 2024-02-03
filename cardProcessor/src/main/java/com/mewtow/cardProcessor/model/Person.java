@@ -1,4 +1,4 @@
-package com.mewtow.cardProcessor.models;
+package com.mewtow.cardProcessor.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
