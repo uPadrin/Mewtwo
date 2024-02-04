@@ -1,47 +1,36 @@
 package org.rabbitmq.dtos;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class TransactionDTO implements Serializable {
 
-    private Long idTransaction;
+    private UUID idTransaction;
     private String dateTransaction;
-    private Long document;
+    private String document;
     private String name;
-    private int age;
-    private Double value;
-    private int numParcelas;
+    private String age;
+    private String valueTransaction;
+    private String numParcelas;
 
-    public TransactionDTO(Long idTransaction, String dateTransaction, Long document, String name, int age, Double value, int numParcelas) {
+    public TransactionDTO(UUID idTransaction, String dateTransaction, String document, String name, String age, String valueTransaction, String numParcelas) {
         this.idTransaction = idTransaction;
         this.dateTransaction = dateTransaction;
         this.document = document;
         this.name = name;
         this.age = age;
-        this.value = value;
+        this.valueTransaction = valueTransaction;
         this.numParcelas = numParcelas;
     }
 
     public TransactionDTO() { }
 
-    @Override
-    public String toString() {
-        return "JsonDTO{" +
-                "idTransaction=" + idTransaction +
-                ", dateTransaction='" + dateTransaction + '\'' +
-                ", document=" + document +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", value=" + value +
-                ", numParcelas=" + numParcelas +
-                '}';
-    }
-
-    public Long getIdTransaction() {
+    public UUID getIdTransaction() {
         return idTransaction;
     }
 
-    public void setIdTransaction(Long idTransaction) {
+    public void setIdTransaction(UUID idTransaction) {
         this.idTransaction = idTransaction;
     }
 
@@ -53,11 +42,11 @@ public class TransactionDTO implements Serializable {
         this.dateTransaction = dateTransaction;
     }
 
-    public Long getDocument() {
+    public String getDocument() {
         return document;
     }
 
-    public void setDocument(Long document) {
+    public void setDocument(String document) {
         this.document = document;
     }
 
@@ -69,27 +58,27 @@ public class TransactionDTO implements Serializable {
         this.name = name;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
-    public Double getValue() {
-        return value;
+    public String getValueTransaction() {
+        return valueTransaction;
     }
 
-    public void setValue(Double value) {
-        this.value = value;
+    public void setValueTransaction(String valueTransaction) {
+        this.valueTransaction = valueTransaction;
     }
 
-    public int getNumParcelas() {
+    public String getNumParcelas() {
         return numParcelas;
     }
 
-    public void setNumParcelas(int numParcelas) {
+    public void setNumParcelas(String numParcelas) {
         this.numParcelas = numParcelas;
     }
 }

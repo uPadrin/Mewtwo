@@ -2,13 +2,16 @@ package br.com.Mewtwo.sendMessage.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.rabbitmq.dtos.TransactionDTO;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import static org.rabbitmq.constants.RabbitMQConstants.*;
@@ -18,11 +21,12 @@ import static org.rabbitmq.constants.RabbitMQConstants.*;
 @Service
 public class TransactionService {
 
+    @Autowired
     private final RabbitTemplate rabbitTemplate;
 
-    public void createTransaction(TransactionDTO dto) {
-        log.info("Sending a message to exchange " + dto.toString());
-        rabbitTemplate.convertAndSend(EXG_NAME_AMQ, RK_TRANSACTION, dto);
+    public void createTransaction(String message) {
+        log.info("Sending a message to exchange " + message);
+        rabbitTemplate.convertAndSend(EXG_NAME_AMQ, RK_TRANSACTION, message);
     }
 
     public void leitor() {
@@ -30,25 +34,35 @@ public class TransactionService {
         String line;
         String cvsSplitBy = ";";
 
-        String jsonFile;
-        try (
-                BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+        JSONArray jsonArray = new JSONArray(); // Cria um array JSON vazio
+
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
 
             while ((line = br.readLine()) != null) {
-
                 String[] data = line.split(cvsSplitBy);
 
                 JSONObject json = new JSONObject();
-                json.put("ID da Transacao", data[0]);
-                json.put("Data da Transacao", data[1]);
-                json.put("Documento", data[2]);
-                json.put("Nome", data[3]);
-                json.put("Idade", data[4]);
-                json.put("Valor", data[5]);
-                json.put("Num. de Parcelas", data[6]);
+                json.put("idTransaction", data[0]);
+                json.put("dateTransaction", data[1]);
+                json.put("document", data[2]);
+                json.put("name", data[3]);
+                json.put("age", data[4]);
+                json.put("valueTransaction", data[5]);
+                json.put("numParcelas", data[6]);
 
-                jsonFile = (json.toString());
-                System.out.println(jsonFile);
+                jsonArray.put(json); // Adiciona o objeto JSON ao array JSON
+            }
+
+            // Agora que o loop terminou, o array JSON está completo
+            String jsonFile = jsonArray.toString();
+
+
+            // Escrever a string JSON em um arquivo
+            try (FileWriter file = new FileWriter("output.json")) {
+                file.write(jsonFile);
+                System.out.println("Arquivo JSON criado com sucesso.");
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
         } catch (IOException e) {
