@@ -6,9 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CardProcessorApplication {
 
 
-    public static void main(String[] args) {/* {
-		SpringApplication.run(CardProcessorApplication.class, args);
-	} */
+    public static void main(String[] args) {
+
         PersonService personService = new PersonService();
 
         personService.leitor();
