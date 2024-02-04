@@ -6,48 +6,49 @@ import java.util.UUID;
 
 public class TransactionDTO implements Serializable {
 
-    private UUID idTransaction;
-    private String dateTransaction;
-    private String document;
+    private UUID transactionId;
+    private String transactionDate;
+    private String id;
     private String name;
     private String age;
-    private String valueTransaction;
-    private String numParcelas;
+    private String amount;
+    private String installmentNumber;
 
-    public TransactionDTO(UUID idTransaction, String dateTransaction, String document, String name, String age, String valueTransaction, String numParcelas) {
-        this.idTransaction = idTransaction;
-        this.dateTransaction = dateTransaction;
-        this.document = document;
+    public TransactionDTO(UUID transactionId, String transactionDate, String id, String name, String age, String amount, String installmentNumber) {
+        this.transactionId = transactionId;
+        this.transactionDate = transactionDate;
+        this.id = id;
         this.name = name;
         this.age = age;
-        this.valueTransaction = valueTransaction;
-        this.numParcelas = numParcelas;
+        this.amount = amount;
+        this.installmentNumber = installmentNumber;
     }
 
-    public TransactionDTO() { }
-
-    public UUID getIdTransaction() {
-        return idTransaction;
+    public TransactionDTO() {
     }
 
-    public void setIdTransaction(UUID idTransaction) {
-        this.idTransaction = idTransaction;
+    public UUID getTransactionId() {
+        return transactionId;
     }
 
-    public String getDateTransaction() {
-        return dateTransaction;
+    public void setTransactionId(UUID transactionId) {
+        this.transactionId = transactionId;
     }
 
-    public void setDateTransaction(String dateTransaction) {
-        this.dateTransaction = dateTransaction;
+    public String getTransactionDate() {
+        return transactionDate;
     }
 
-    public String getDocument() {
-        return document;
+    public void setTransactionDate(String transactionDate) {
+        this.transactionDate = transactionDate;
     }
 
-    public void setDocument(String document) {
-        this.document = document;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -66,19 +67,19 @@ public class TransactionDTO implements Serializable {
         this.age = age;
     }
 
-    public String getValueTransaction() {
-        return valueTransaction;
+    public String getAmount() {
+        return amount;
     }
 
-    public void setValueTransaction(String valueTransaction) {
-        this.valueTransaction = valueTransaction;
+    public void setAmount(String amount) {
+        this.amount = amount;
     }
 
-    public String getNumParcelas() {
-        return numParcelas;
+    public String getInstallmentNumber() {
+        return installmentNumber;
     }
 
-    public void setNumParcelas(String numParcelas) {
-        this.numParcelas = numParcelas;
+    public void setInstallmentNumber(String installmentNumber) {
+        this.installmentNumber = installmentNumber;
     }
 }
