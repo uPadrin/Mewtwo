@@ -6,9 +6,9 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
-@Getter
-@Setter
 @Table(name = "tb_person")
 public class Person {
 
@@ -22,7 +22,49 @@ public class Person {
     @NotNull
     private int age;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "person", cascade = CascadeType.REMOVE)
     @JsonIgnoreProperties("person")
-    private Transaction transaction;
+    private List<Transaction> transaction;
+
+    public Person(Long id, String name, int age, List<Transaction> transaction) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.transaction = transaction;
+    }
+
+    public Person() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public List<Transaction> getTransaction() {
+        return transaction;
+    }
+
+    public void setTransaction(List<Transaction> transaction) {
+        this.transaction = transaction;
+    }
 }

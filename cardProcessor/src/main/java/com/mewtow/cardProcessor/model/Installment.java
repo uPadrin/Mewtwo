@@ -13,8 +13,6 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 @Entity
 @Table(name = "tb_istallment")
 public class Installment {
@@ -29,6 +27,48 @@ public class Installment {
 	private BigDecimal value;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("Installment")
+	@JsonIgnoreProperties("installment")
 	private Transaction transaction;
+
+	public Installment(Long id, Long installment_number, BigDecimal value, Transaction transaction) {
+		this.id = id;
+		this.installment_number = installment_number;
+		this.value = value;
+		this.transaction = transaction;
+	}
+
+	public Installment() {
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getInstallment_number() {
+		return installment_number;
+	}
+
+	public void setInstallment_number(Long installment_number) {
+		this.installment_number = installment_number;
+	}
+
+	public BigDecimal getValue() {
+		return value;
+	}
+
+	public void setValue(BigDecimal value) {
+		this.value = value;
+	}
+
+	public Transaction getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(Transaction transaction) {
+		this.transaction = transaction;
+	}
 }
