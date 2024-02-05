@@ -5,7 +5,7 @@
 <br clear="both">
 
 <div align="center">
-  <img height="500" src="https://ik.imagekit.io/padrin/Design%20sem%20nome%20(2).png?updatedAt=1707082836873"  />
+  <img src="https://ik.imagekit.io/padrin/Design%20sem%20nome%20(2).png?updatedAt=1707082836873"  />
 </div>
 
 ###
@@ -69,17 +69,39 @@
 
 
 <h4 align="left">Membros da equipe</h4>
-<p align="left">
- Bryan Vieira
-  <br>
- Leonardo Duarte
-  <br>
- Natha Coelho
-  <br>
- Vinicius Monteiro
-  <br>
- Vitor Ferreira
-</p>
-
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/uPadrin">
+        <img src="https://github.com/uPadrin.png" width="100px;"/><br>
+          <b>Bryan Vieira</b>
+        </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/LeoDuarte37">
+        <img src="https://github.com/LeoDuarte37.png" width="100px;"/><br>
+          <b>Leonardo Duarte</b>
+      </a>
+    </td>      
+      <td align="center">
+      <a href="https://github.com/nathanccoelho">
+        <img src="https://github.com/nathanccoelho.png" width="100px;"/><br>
+        <b>Natha Coelho></b>
+      </a>
+    </td> 
+      <td align="center">
+      <a href="https://github.com/mcs-vinicius">
+        <img src="https://github.com/mcs-vinicius.png" width="100px;"/><br>
+        <b>Vinicius Monteiro</b>
+      </a>
+    </td>
+      <td align="center">
+      <a href="https://github.com/Vitornasc3">
+        <img src="https://github.com/Vitornasc3.png" width="100px;"/><br>
+        <b>Vitor Nascimento</b>
+      </a>
+    </td>
+        </td> 
+</table>
 
 
