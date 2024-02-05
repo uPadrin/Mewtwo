@@ -55,12 +55,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-<<<<<<< HEAD
-            <groupId>com.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
-            <version>5.9</version>
-        </dependency>
-=======
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.10.1</version>
@@ -75,7 +69,6 @@
 			<artifactId>commons</artifactId>
 			<version>1.0.7</version>
 		</dependency>
->>>>>>> consumer
 	</dependencies>
 
 	<build>
