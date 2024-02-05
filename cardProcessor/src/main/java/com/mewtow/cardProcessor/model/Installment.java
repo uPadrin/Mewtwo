@@ -21,20 +21,16 @@ public class Installment {
 	private Long id;
 	
 	@NotNull
-	private Long installment_number;
-	
-	@NotNull
-	private BigDecimal value;
+	private Long installmentNumber;
+
+	private BigDecimal installmentValue;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("installment")
 	private Transaction transaction;
 
-	public Installment(Long id, Long installment_number, BigDecimal value, Transaction transaction) {
-		this.id = id;
-		this.installment_number = installment_number;
-		this.value = value;
-		this.transaction = transaction;
+	public Installment(Long installmentNumber) {
+		this.installmentNumber = installmentNumber;
 	}
 
 	public Installment() {
@@ -48,20 +44,20 @@ public class Installment {
 		this.id = id;
 	}
 
-	public Long getInstallment_number() {
-		return installment_number;
+	public Long getInstallmentNumber() {
+		return installmentNumber;
 	}
 
-	public void setInstallment_number(Long installment_number) {
-		this.installment_number = installment_number;
+	public void setInstallmentNumber(Long installmentNumber) {
+		this.installmentNumber = installmentNumber;
 	}
 
-	public BigDecimal getValue() {
-		return value;
+	public BigDecimal getInstallmentValue() {
+		return installmentValue;
 	}
 
-	public void setValue(BigDecimal value) {
-		this.value = value;
+	public void setInstallmentValue(BigDecimal installmentValue) {
+		this.installmentValue = installmentValue;
 	}
 
 	public Transaction getTransaction() {

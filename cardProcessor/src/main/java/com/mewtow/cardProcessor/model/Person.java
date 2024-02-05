@@ -13,7 +13,6 @@ import java.util.List;
 public class Person {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
@@ -26,11 +25,10 @@ public class Person {
     @JsonIgnoreProperties("person")
     private List<Transaction> transaction;
 
-    public Person(Long id, String name, int age, List<Transaction> transaction) {
+    public Person(Long id, String name, int age) {
         this.id = id;
         this.name = name;
         this.age = age;
-        this.transaction = transaction;
     }
 
     public Person() {
@@ -56,9 +54,7 @@ public class Person {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+    public void setAge(int age) { this.age = age; }
 
     public List<Transaction> getTransaction() {
         return transaction;

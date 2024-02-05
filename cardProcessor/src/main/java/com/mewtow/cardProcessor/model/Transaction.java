@@ -22,15 +22,14 @@ public class Transaction {
 	private Person person;
 
 	@NotNull
-	private String transaction_date;
+	private String transactionDate;
 
 	@NotNull
 	private int amount;
 
-	public Transaction(Long id, Person person, String transaction_date, int amount) {
+	public Transaction(Long id, String transactionDate, int amount) {
 		this.id = id;
-		this.person = person;
-		this.transaction_date = transaction_date;
+		this.transactionDate = transactionDate;
 		this.amount = amount;
 	}
 
@@ -45,20 +44,20 @@ public class Transaction {
 		this.id = id;
 	}
 
-	public Person getPerson_id() {
+	public Person getPerson() {
 		return person;
 	}
 
-	public void setPerson_id(Person person) {
+	public void setPerson(Person person) {
 		this.person = person;
 	}
 
-	public String getTransaction_date() {
-		return transaction_date;
+	public String getTransactionDate() {
+		return transactionDate;
 	}
 
-	public void setTransaction_date(String transaction_date) {
-		this.transaction_date = transaction_date;
+	public void setTransactionDate(String transactionDate) {
+		this.transactionDate = transactionDate;
 	}
 
 	public int getAmount() {
