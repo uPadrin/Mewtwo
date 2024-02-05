@@ -58,9 +58,11 @@
   <br>
   4 - Em seguida abra sua IDE de preferencia e selecione os projetos "sendMessage" e "cardProcessor".
   <br>
-  5 - Execute o programa sendMessage para fazer a leitura, conversão e envio dos dados para a fila Rabbitmq. (Você pode conferir o envio através do RabbitMq utilizando usuario: guest e senha: guest)
+  5 - Rode o comando mvn clean install nos dois projetos;
   <br>
-  6 - Em seguida, execute o projeto CardProcessor para fazer o recebemineto dos dados da fila. Os dados apenas serão exibidos no console.
+  6 - Execute o programa sendMessage para fazer a leitura, conversão e envio dos dados para a fila Rabbitmq. (Você pode conferir o envio através do RabbitMq utilizando usuario: guest e senha: guest)
+  <br>
+  7 - Em seguida, execute o projeto CardProcessor para fazer o recebemineto dos dados da fila. Os dados apenas serão exibidos no console.
   <br>
    - A partir desse ponto, o projeto ainda se encontra em andamento. 🔧
 </p>
