@@ -42,6 +42,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="docker logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
+  <img src="https://dbdb.io/media/logos/h2-logo.svg" height="40" alt "H2DB logo">
 </div>
 
 
@@ -49,33 +50,34 @@
 <h2 align="left">Testes das Aplicações</h2>
 <h4 align="left">Adicionando o projeto no repositório local</h4>
 <p align="left">
-  1 - Crie uma pasta no local de sua preferencia
+  1 - Crie uma pasta no local de sua preferencia.
   <br>
-  2 - Clique com o botão direito do mouse e abra o seu terminal, em seguida insira o seguinte comando  "git clone https://github.com/uPadrin/Mewtwo.git"
+  2 - Clique com o botão direito do mouse e abra o seu terminal, em seguida insira o seguinte comando  "git clone https://github.com/uPadrin/Mewtwo.git".
   <br>
-  3 - Em seguida abra sua IDE de preferencia e selecione os projetos "sendMessage" e "cardProcessor"
+  3 - Acesse o diretório devops no projeto SendMessage e execute o docker.
+  <br>
+  4 - Em seguida abra sua IDE de preferencia e selecione os projetos "sendMessage" e "cardProcessor".
+  <br>
+  5 - Execute o programa sendMessage para fazer a leitura, conversão e envio dos dados para a fila Rabbitmq. (Você pode conferir o envio através do RabbitMq utilizando usuario: guest e senha: guest)
+  <br>
+  6 - Em seguida, execute o projeto CardProcessor para fazer o recebemineto dos dados da fila.
+  <br>
+   - A partir desse ponto, o projeto ainda se encontra em andamento. 🔧
 </p>
 
 
-<h4 align="left">Titulo</h4>
+<h4 align="left">Membros da equipe</h4>
 <p align="left">
-  4 - 
+ Bryan Vieira
   <br>
-  5 - 
+ Leonardo Duarte
   <br>
-  6 - 
+ Natha Coelho
   <br>
-  7 - 
+ Vinicius Monteiro
+  <br>
+ Vitor Ferreira
 </p>
 
-<h4 align="left">Titulo</h4>
-<p align="left">
-  8 - 
-  <br>
-  9 - 
-  <br>
-  10 - 
-  <br>
-  11 -
-</p>
+
 
