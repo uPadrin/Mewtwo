@@ -41,8 +41,8 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="docker logo"  />
   <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
   <img src="https://dbdb.io/media/logos/h2-logo.svg" height="40" alt "H2DB logo">
+  <img width="12" />
 </div>
 
 
@@ -60,7 +60,7 @@
   <br>
   5 - Execute o programa sendMessage para fazer a leitura, conversão e envio dos dados para a fila Rabbitmq. (Você pode conferir o envio através do RabbitMq utilizando usuario: guest e senha: guest)
   <br>
-  6 - Em seguida, execute o projeto CardProcessor para fazer o recebemineto dos dados da fila.
+  6 - Em seguida, execute o projeto CardProcessor para fazer o recebemineto dos dados da fila. Os dados apenas serão exibidos no console.
   <br>
    - A partir desse ponto, o projeto ainda se encontra em andamento. 🔧
 </p>
